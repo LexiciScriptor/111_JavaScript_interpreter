@@ -1,8 +1,8 @@
 //111 interpreter in JavaScript by Lexici Scriptor
 //111 by Ehird @ Esolang
 
-//actually, this is not an 111 interpreter: the substitution doesn't repeat; it will _continue_
-//but it seems more fun this way
+//Actually, this is not an 111 interpreter: the substitution doesn't repeat; it will _continue_!
+//Just comment the second line of the rep function and decomment the third to have a proper 111 interpreter.
 
 var s = ""; //insert here the 111 code; fuck no standard input
 var l = 0, e = 0; //ones, exit
@@ -17,6 +17,7 @@ function red(i){ //counts and removes initial 'i's
 function rep(s,p,r){ //replaces p with r in s
     if ((s.length < p.length)) return s;
     if (s.slice(0,p.length) == p) return r + rep(s.slice(p.length),p,r);
+    //if (s.slice(0,p.length) == p) return r + s.slice(p.length);
     return s[0] + rep(s.slice(1),p,r);
 }
 
