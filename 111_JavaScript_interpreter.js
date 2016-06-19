@@ -1,6 +1,9 @@
 //111 interpreter in JavaScript by Lexici Scriptor
 //111 by Ehird @ Esolang
 
+//actually, this is not an 111 interpreter: the substitution doesn't repeat; it will _continue_
+//but it seems more fun this way
+
 var s = ""; //insert here the 111 code; fuck no standard input
 var l = 0, e = 0; //ones, exit
 var p, r; //pattern, replacement
